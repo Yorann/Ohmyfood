@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+
+	&__logo {
+		position: relative;
+		font-family: $secondary-font;
+		color: black;
+		font-size: 2rem;
+		padding: 10px 20px;
+		width: 100%;
+		box-shadow: $shadow
+	}
+
+	&__location {
+		font-family: $primary-font;
+		background-color: $fourth-color ;
+		padding: 14px 20px;
+		width: 100%;
+		color: lighten(black, 20%);
+		i {
+			margin-right: 20px;
+		}
+	}
+
+	&__description {
+		width: 100%;
+		padding: 35px 20px;
+		background-color: lighten($fourth-color, 5%);
+		p {
+			margin-bottom: 45px;
+			color: darken($fourth-color, 45%);
+		}
+	}
+}
