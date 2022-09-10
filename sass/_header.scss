@@ -6,13 +6,20 @@
 	text-align: center;
 
 	&__logo {
-		position: relative;
-		font-family: $secondary-font;
-		color: black;
-		font-size: 2rem;
-		padding: 10px 20px;
-		width: 100%;
-		box-shadow: $shadow
+	position: relative;
+	font-family: $secondary-font;
+	color: black;
+	font-size: 2rem;
+	padding: 10px 20px;
+	width: 100%;
+	box-shadow: $shadow
+	}
+	&__arrow{
+	color: black;
+	font-size: x-large;
+	position:absolute;
+	left: 20px;
+	top:18px;
 	}
 
 	&__location {
@@ -21,6 +28,7 @@
 		padding: 14px 20px;
 		width: 100%;
 		color: lighten(black, 20%);
+
 		i {
 			margin-right: 20px;
 		}
@@ -30,6 +38,7 @@
 		width: 100%;
 		padding: 35px 20px;
 		background-color: lighten($fourth-color, 5%);
+
 		p {
 			margin-bottom: 45px;
 			color: darken($fourth-color, 45%);

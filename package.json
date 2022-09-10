@@ -10,6 +10,6 @@
   "author": "Yorann Hellec yorannhellec@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.54.5"
+    "sass": "^1.54.9"
   }
 }
