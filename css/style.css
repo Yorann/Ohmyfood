@@ -223,7 +223,7 @@ h1 {
   color: black;
 }
 .heart:hover .heart-fill {
-  transform: scale(1.08);
+  transform: scale(1.09);
 }
 .heart i {
   position: absolute;
@@ -272,8 +272,17 @@ h1 {
     transform: rotate(0);
   }
 }
+@keyframes progressive-appearing {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .photo-resto {
   max-width: 100%;
+  display: block;
   position: relative;
   object-fit: cover;
   width: 100%;
@@ -313,6 +322,20 @@ h1 {
   overflow: hidden;
   display: flex;
   margin-bottom: 20px;
+  animation: progressive-appearing 1.5s;
+  animation-fill-mode: both;
+}
+.restos ul li:nth-child(1) {
+  animation-delay: 200ms;
+}
+.restos ul li:nth-child(2) {
+  animation-delay: 400ms;
+}
+.restos ul li:nth-child(3) {
+  animation-delay: 600ms;
+}
+.restos ul li:nth-child(4) {
+  animation-delay: 800ms;
 }
 .restos ul li:hover .restos__menu__cartes__checked {
   margin-right: 0;
@@ -370,7 +393,7 @@ h1 {
 }
 .restos__name i.fas:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 .restos__menu {
   display: grid;
@@ -387,7 +410,7 @@ h1 {
   padding-right: 20px;
   overflow: hidden;
 }
-.restos__menu__cartes__plats {
+.restos__menu__cartes__dishes {
   padding: 0;
   white-space: nowrap;
   overflow: hidden;

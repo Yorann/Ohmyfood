@@ -1,6 +1,7 @@
 
 .photo-resto {
 	max-width: 100%;
+	display: block;
 	position: relative;
 	object-fit: cover;
     width: 100%;
@@ -35,17 +36,25 @@
 		}
 	}
 
-	ul {
-		padding-left: 0;
-
-
+		ul {
+			padding-left: 0;
+	
 		li {
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+					animation-delay: 200ms* $i;
+				}
+			}
+
 			background-color: white;
 			border-radius: 20px;
 			box-shadow: $shadow;
 			overflow: hidden;
 			display: flex;
 			margin-bottom: 20px;
+			animation: progressive-appearing 1.5s;
+			animation-fill-mode: both;
+
 
 			&:hover .restos__menu__cartes__checked {
 				margin-right: 0;
@@ -112,7 +121,7 @@
 
 				&:hover {
 					opacity: 1;
-					transform: scale(1.05);
+					transform: scale(1.07);
 				}
 			}
 		}
@@ -132,7 +141,7 @@
 	
 			overflow: hidden;
 
-			&__plats {
+			&__dishes {
 				padding: 0;
 				white-space: nowrap;
 				overflow: hidden;
