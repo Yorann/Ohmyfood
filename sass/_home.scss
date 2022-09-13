@@ -76,7 +76,7 @@
 	&__block {
 		display: flex;
 		flex-direction: column;
-		@media (min-width:1131px) {
+		@media (min-width:800px) {
 			display: grid;
 			grid-template-columns:repeat(2, 1fr);
 		}

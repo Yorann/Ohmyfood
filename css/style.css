@@ -173,7 +173,7 @@ h1 {
   flex-grow: 1;
   padding-bottom: 3rem;
 }
-@media (min-width: 1131px) {
+@media (min-width: 800px) {
   .restaurant__block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -259,6 +259,13 @@ h1 {
 }
 .footer ul {
   padding-left: 0;
+}
+@media (min-width: 800px) {
+  .footer ul {
+    display: inline-flex;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
 }
 .footer ul li {
   margin-bottom: 7px;
@@ -434,7 +441,7 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .restos__menu {
     grid-template-columns: 1fr;
   }
