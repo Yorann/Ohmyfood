@@ -173,6 +173,12 @@ h1 {
   flex-grow: 1;
   padding-bottom: 3rem;
 }
+@media (min-width: 1131px) {
+  .restaurant__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .restaurant__cards {
   background-color: white;
   height: 260px;

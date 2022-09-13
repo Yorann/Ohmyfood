@@ -76,6 +76,10 @@
 	&__block {
 		display: flex;
 		flex-direction: column;
+		@media (min-width:1131px) {
+			display: grid;
+			grid-template-columns:repeat(2, 1fr);
+		}
 		gap: 1rem;
 		flex-grow: 1;
 		padding-bottom: 3rem;
