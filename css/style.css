@@ -274,10 +274,38 @@ h1 {
 }
 @keyframes progressive-appearing {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+/* Animation de chargement de la page */
+.loader {
+  background-color: white;
+  opacity: 0.6;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  animation: page-loader-disapear 0.5s 0.9s forwards;
+  display: grid;
+  place-items: center;
+}
+.loader i {
+  background: linear-gradient(358deg, #9356DC, #FF79DA 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes page-loader-disapear {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 .photo-resto {
