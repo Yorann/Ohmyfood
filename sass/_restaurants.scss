@@ -42,7 +42,7 @@
 		li {
 			@for $i from 1 through 4 {
 				&:nth-child(#{$i}) {
-					animation-delay: 200ms* $i;
+					animation-delay: 280ms* $i;
 				}
 			}
 
@@ -84,7 +84,7 @@
 
 
 			}
-
+/* Revoir */
 			p {
 				margin: 0;
 				font-size: 0.9rem;
