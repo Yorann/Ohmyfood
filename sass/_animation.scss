@@ -1,47 +1,66 @@
 @keyframes turning-arrow {
-    0% {
-        transform: rotate(-270deg);
-    }
+	0% {
+		transform: rotate(-270deg);
+	}
 
-    100% {
-        transform: rotate(0);
-    }
+	100% {
+		transform: rotate(0);
+	}
 }
+
 /* Animation apparution des menus progressive */
 @keyframes progressive-appearing {
-    0% {
-        transform: translateY(50%);
-        opacity: 0;
-    }
+	0% {
+		transform: translateY(50%);
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
-        transform: translateY(1);
-    }
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
+
 /* Animation de chargement de la page */
-.loader{
-    background-color: white;
-    opacity: 0.6;
-    height: 100vh;
-    position: fixed;
-    inset: 0;
-    z-index: 2;
-    animation: page-loader-disapear 0.5s 0.9s forwards;
-    display: grid;
-    place-items: center;
-    i{
-        color: transparent;
-        background-image: linear-gradient($primary-color, $secondary-color);
-        background-clip: text;
-        -webkit-background-clip: text;    }
+.loader {
+	background-color: white;
+	opacity: 1;
+	height: 100vh;
+	position: fixed;
+	inset: 0;
+	z-index: 2;
+	animation: page-loader-disapear 3s 0.9s forwards;
+	display: grid;
+	place-items: center;
 
+	&__spinner {
+		border-top: solid $third-color 10px;
+		border-radius: 50%;
+		background-clip: padding-box;
+		display: flex;
+		align-items: center;
+		width: 200px;
+		height: 200px;
+		animation: page-loader-spinner 3s forwards;
+	}
 }
+
 @keyframes page-loader-disapear {
-    0%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
- }
+	0% {
+		visibility: visible;
+	}
+
+	100% {
+		visibility: hidden;
+	}
+}
+
+@keyframes page-loader-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(1160deg);
+	}
+}

@@ -14,15 +14,14 @@
 		padding-left: 10px;
 		margin-bottom: 60px;
 
-		@media (max-width:1131px) {
+		@media (max-width:$breakpoint-desktop) {
 			flex-direction: column;
 		}
 	}
 
 	& li {
 		background-color: lighten($fourth-color, 5%);
-		padding: 1.5rem 0;
-		padding-left: 2rem;
+		padding: 1.5rem 1.5rem;
 		flex-grow: 1;
 		border-radius: 20px;
 		box-shadow: $shadow;
@@ -31,7 +30,7 @@
 		align-items: center;
 
 		& i {
-			margin-right: 1.5rem;
+			margin-right: 25px;
 			color: darken($fourth-color, 45%);
 			font-size: 25px;
 		}
@@ -76,7 +75,7 @@
 	&__block {
 		display: flex;
 		flex-direction: column;
-		@media (min-width:800px) {
+		@media (min-width:$breakpoint-tablet) {
 			display: grid;
 			grid-template-columns:repeat(2, 1fr);
 		}
@@ -89,11 +88,10 @@
 		background-color: white;
 		height: 260px;
 		flex-grow: 1;
-		min-width: 19rem;
 		position: relative;
 		border-radius: 15px 15px 15px 15px;
 		box-shadow: $shadow;
-		a{
+		a {
 			display: block;
 			height: 100%;
 		}

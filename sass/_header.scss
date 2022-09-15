@@ -4,7 +4,14 @@
 	flex-direction: column;
 	width: 100%;
 	text-align: center;
-
+	&__photo {
+		max-width: 100%;
+		display: block;
+		position: relative;
+		object-fit: cover;
+		width: 100%;
+		height: 280px;
+	}
 	&__logo {
 	position: relative;
 	font-family: $secondary-font;
@@ -20,6 +27,7 @@
 	position:absolute;
 	left: 20px;
 	top:18px;
+
 	}
 
 	&__location {

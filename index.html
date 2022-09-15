@@ -6,10 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/logo/favicon_io/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon_io/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon_io/favicon-16x16.png">
-	<link rel="manifest" href="images/logo/favicon_io/site.webmanifest">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon_io/favicon.png">
 	<title>Oh My Food</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +20,7 @@
 
 <body>
 	<div class="loader">
-		<i class="fas fa-solid fa-utensils fa-6x fa-spin"></i>
+		<div class="loader__spinner"></div>
 	</div>
 	<header class="header">
 		<a class="header__logo" href="index.html">ohmyfood</a>
@@ -32,7 +29,7 @@
 			<h1>		
 				Réservez le menu qui vous convient</h1>
 			<p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-			<a class="button" href="#">
+			<a class="button"href="#restaurant">
 				Explorer nos restaurants
 			</a>
 		</div>
@@ -50,7 +47,7 @@
 
 			</ul>
 		</section>
-		<section class="restaurant">
+		<section id="restaurant" class="restaurant">
 			<h2>Restaurants</h2>
 			<div class="restaurant__block">
 				<div class="restaurant__cards">
@@ -114,8 +111,8 @@
 		</section>
 	</main>
 
-	<footer>
-		<div class="footer">
+	<footer class="footer">
+		<div class="footer__content">
 			<h3>ohmyfood</h3>
 			<ul>
 				<li><a href="#"><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a></li>

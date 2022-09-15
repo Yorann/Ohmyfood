@@ -10,7 +10,9 @@ $secondary-font: 'Shrikhand', cursive;
 
 /* shadow */
 $shadow: 0 3px 9px rgb(218 218 218);
-$darkshadow: 2px 1px 16px -3px darken($fourth-color, 45%)
+$darkshadow: 2px 1px 16px -3px darken($fourth-color, 45%);
 
+$breakpoint-tablet:800px;
+$breakpoint-desktop:1200px;
 
 

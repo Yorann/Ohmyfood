@@ -12,15 +12,18 @@ Site de commande de plats de restaurants en lignes
 Projet 3 de la formation developpeur web OPENCLASSROOMS
 https://openclassrooms.com/fr/paths/556/projects/637/assignment
 
-### Prerequisites
+### Prerequis
 
 Installer node pour lire correctement le site
 
 
 
-## Deployment
+## Comment démarrer le projet en local 
 
-Add additional notes about how to deploy this on a live system
+```javascript
+npm install
+npm run dev
+```
 
 ## Built With
 
