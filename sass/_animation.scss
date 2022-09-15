@@ -41,7 +41,7 @@
 		align-items: center;
 		width: 200px;
 		height: 200px;
-		animation: page-loader-spinner 3s forwards;
+		animation: page-loader-spinner 3s linear forwards;
 	}
 }
 
