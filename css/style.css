@@ -191,6 +191,11 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (min-width: 1200px) {
+  .restaurant__block {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .restaurant__cards {
   background-color: white;
   height: 246px;
