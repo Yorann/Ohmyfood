@@ -28,6 +28,9 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		@media (min-width:600px) {
+			justify-content: center;
+		}
 
 		& i {
 			margin-right: 25px;
