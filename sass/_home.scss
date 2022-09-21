@@ -20,6 +20,7 @@
 	}
 
 	& li {
+		transition: all 0.3s ease ;
 		background-color: lighten($fourth-color, 5%);
 		padding: 1.5rem 1.5rem;
 		flex-grow: 1;
@@ -28,9 +29,6 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		@media (min-width:600px) {
-			justify-content: center;
-		}
 
 		& i {
 			margin-right: 25px;
@@ -55,7 +53,7 @@
 		}
 
 		&:hover {
-			background-color: lighten($primary-color, 25%);
+			background-color: lighten($primary-color, 35%);
 
 			& i {
 				color: $primary-color;
@@ -138,6 +136,7 @@
 			place-items: center;
 			font-weight: 500;
 			font-size: 0.8rem;
+			border-radius: 2px;
 		}
 	}
 }

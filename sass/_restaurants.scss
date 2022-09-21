@@ -97,6 +97,9 @@
 		margin-top: -3rem;
 		border-radius: 35px 35px 0 0;
 		background-color: lighten($fourth-color, 5%);
+		@media (min-width: $breakpoint-tablet) {
+			margin-top: -5rem;
+		}
 
 		i {
 			position: absolute;
@@ -123,6 +126,9 @@
 	&__menu {
 		grid-template-columns: 1fr;
 		display: grid;
+		background-color: lighten($fourth-color, 5%);
+		position: relative;
+
 
 
 		@media (min-width: $breakpoint-tablet) {
