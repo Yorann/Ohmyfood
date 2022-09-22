@@ -510,9 +510,9 @@ h1 {
   place-items: center;
   color: #99E2D0;
   background-color: #99E2D0;
-  width: 74px;
+  width: 60px;
   height: auto;
-  margin-right: -74px;
+  margin-right: -60px;
   padding: 0;
   border-radius: 0 14px 14px 0;
   transition: margin-right 0.7s;
@@ -522,7 +522,8 @@ h1 {
   place-items: center;
   background: white;
   border-radius: 50%;
-  width: 2em;
+  width: 1.35rem;
+  -webkit-text-stroke-width: 1px;
   aspect-ratio: 1/1;
 }
 
