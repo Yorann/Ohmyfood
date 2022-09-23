@@ -331,8 +331,6 @@ h1 {
   z-index: 2;
 }
 .loader__spinner {
-  opacity: 1;
-  position: fixed;
   border-top: solid #99E2D0 10px;
   border-radius: 50%;
   align-items: center;
