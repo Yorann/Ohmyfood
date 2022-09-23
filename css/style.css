@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* colors */
 /* fonts */
 /* shadow */
@@ -257,8 +258,8 @@ h1 {
 }
 .heart i {
   position: absolute;
-  right: 1rem;
-  bottom: 2rem;
+  right: 2rem;
+  bottom: 25px;
   font-size: 22px;
 }
 .heart i.heart-fill {
@@ -267,7 +268,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   transform: scale(0);
-  transition: all 400ms;
+  transition: all 500ms;
 }
 
 .footer__content {
@@ -301,48 +302,7 @@ h1 {
   padding-right: 15px;
 }
 
-@keyframes turning-arrow {
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-/* Animation apparution des menus progressive */
-@keyframes progressive-appearing {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Animation de chargement de la page */
-.loader {
-  background-color: #EAEAEA;
-  opacity: 1;
-  height: 100vh;
-  position: fixed;
-  inset: 0;
-  z-index: 2;
-  animation: page-loader-disapear 3s 0.9s forwards;
-  display: grid;
-  place-items: center;
-}
-.loader__spinner {
-  border-top: solid #99E2D0 10px;
-  border-radius: 50%;
-  background-clip: padding-box;
-  display: flex;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  animation: page-loader-spinner 3s linear forwards;
-}
-
+/* Animation de chargement de la page d'accueil */
 @keyframes page-loader-disapear {
   0% {
     visibility: visible;
@@ -357,6 +317,48 @@ h1 {
   }
   100% {
     transform: rotate(1160deg);
+  }
+}
+.loader {
+  background-color: #EAEAEA;
+  opacity: 0.95;
+  height: 100vh;
+  inset: 0;
+  position: fixed;
+  animation: page-loader-disapear 3s 0.9s forwards;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+.loader__spinner {
+  opacity: 1;
+  position: fixed;
+  border-top: solid #99E2D0 10px;
+  border-radius: 50%;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  animation: page-loader-spinner 3s linear forwards;
+}
+
+/* Animation apparition progressive des menus  */
+@keyframes progressive-appearing {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animation de la coche que se retourne dans les plats  */
+@keyframes turning-arrow {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 .restos {
@@ -445,6 +447,13 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /* Adaptation du texte des plats de restaurant
+   sur petits écrans de mobiles */
+}
+@media (max-width: 350px) {
+  .restos ul li p {
+    font-size: 0.75rem;
+  }
 }
 .restos__name {
   display: flex;
@@ -457,24 +466,6 @@ h1 {
   .restos__name {
     margin-top: -5rem;
   }
-}
-.restos__name i {
-  position: absolute;
-  right: 2rem;
-  top: 1.4rem;
-  font-size: 22px;
-}
-.restos__name i.fas {
-  color: transparent;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 400ms;
-}
-.restos__name i.fas:hover {
-  opacity: 1;
-  transform: scale(1.07);
 }
 .restos__menu {
   grid-template-columns: 1fr;

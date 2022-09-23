@@ -87,6 +87,11 @@
 				overflow: hidden;
 				white-space: nowrap;
 				text-overflow: ellipsis;
+	/* Adaptation du texte des plats de restaurant
+	 sur petits écrans de mobiles */
+				@media (max-width: 350px){
+					font-size: 0.75rem;
+				}
 			}
 		}
 	}
@@ -101,26 +106,6 @@
 			margin-top: -5rem;
 		}
 
-		i {
-			position: absolute;
-			right: 2rem;
-			top: 1.4rem;
-			font-size: 22px;
-
-			&.fas {
-				color: transparent;
-				background-image: linear-gradient($primary-color, $secondary-color);
-				background-clip: text;
-				-webkit-background-clip: text;
-				opacity: 0;
-				transition: all 400ms;
-
-				&:hover {
-					opacity: 1;
-					transform: scale(1.07);
-				}
-			}
-		}
 	}
 
 	&__menu {

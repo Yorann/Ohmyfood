@@ -1,49 +1,4 @@
-@keyframes turning-arrow {
-	0% {
-		transform: rotate(-270deg);
-	}
-
-	100% {
-		transform: rotate(0);
-	}
-}
-
-/* Animation apparution des menus progressive */
-@keyframes progressive-appearing {
-	0% {
-		transform: translateY(50%);
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-/* Animation de chargement de la page */
-.loader {
-	background-color: $fourth-color;
-	opacity: 1;
-	height: 100vh;
-	position: fixed;
-	inset: 0;
-	z-index: 2;
-	animation: page-loader-disapear 3s 0.9s forwards;
-	display: grid;
-	place-items: center;
-
-	&__spinner {
-		border-top: solid $third-color 10px;
-		border-radius: 50%;
-		background-clip: padding-box;
-		display: flex;
-		align-items: center;
-		width: 200px;
-		height: 200px;
-		animation: page-loader-spinner 3s linear forwards;
-	}
-}
+/* Animation de chargement de la page d'accueil */
 
 @keyframes page-loader-disapear {
 	0% {
@@ -62,5 +17,53 @@
 
 	100% {
 		transform: rotate(1160deg);
+	}
+}
+
+.loader {
+	background-color: $fourth-color;
+	opacity: 0.95;
+	height: 100vh;
+	inset: 0;
+	position: fixed;
+	animation: page-loader-disapear 3s 0.9s forwards;
+	display: grid;
+	place-items: center;
+	z-index: 2;
+
+	&__spinner {
+		opacity: 1;
+		position: fixed;
+		border-top: solid $third-color 10px;
+		border-radius: 50%;
+		align-items: center;
+		width: 250px;
+		height: 250px;
+		animation: page-loader-spinner 3s linear forwards;
+	}
+}
+
+/* Animation apparition progressive des menus  */
+
+@keyframes progressive-appearing {
+	0% {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+/* Animation de la coche que se retourne dans les plats  */
+
+@keyframes turning-arrow {
+	0% {
+		transform: rotate(-270deg);
+	}
+
+	100% {
+		transform: rotate(0);
 	}
 }
